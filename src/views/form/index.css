@@ -1,0 +1,28 @@
+.form-bg {
+  position: fixed;
+  inset: 0px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  --tw-shadow-color: #fff;
+  --tw-shadow: var(--tw-shadow-colored);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  transition-duration: 300ms;
+  opacity: 0;
+  visibility: hidden;
+  --tw-translate-y: 6rem /* 96px */;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.form-bg.open {
+  visibility: visible;
+  opacity: 1;
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}

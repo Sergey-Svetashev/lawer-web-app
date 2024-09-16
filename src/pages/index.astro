@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Main.astro";
+import Footer from "../views/footer.astro";
+import TEXT from "../TEXT";
+import { Form } from "../views/form";
+import { FormSwitcher } from "../views/formSwitcher";
+import { Nav } from "../components/nav";
+---
+
+<Layout title={TEXT.layoutTitle}>
+  <div class="wrapper">
+    <Nav client:only="react" />
+    <div class="home">
+      <header id="header">
+        <div class="container">
+          <div class="header__wrap">
+            <img src="/header_photo.png" alt={TEXT.alts.main} />
+            <h2 class="header__over-title">{TEXT.header.title}</h2>
+            <h3 class="header__title">{TEXT.header.subtitle}</h3>
+            <h1 class="header__headline">{TEXT.header.text}</h1>
+            <FormSwitcher client:only="react" />
+          </div>
+        </div>
+      </header>
+      <section id="skill" class="skill">
+        <div class="container">
+          <div class="skill__wrap">
+            <h2 class="title">{TEXT.skill.title}</h2>
+            <h3 class="skill__subtitle">{TEXT.skill.subtitle}</h3>
+            <p class="honor__text">{TEXT.skill.text_01}</p>
+            <p class="honor__text">{TEXT.skill.text_02}</p>
+            <FormSwitcher client:only="react" />
+          </div>
+          Awards here
+        </div>
+      </section>
+      <section id="citation" class="citation">
+        <div class="container">
+          <h2 class="title">{TEXT.quote.title}</h2>
+          <div class="citation__case">
+            <div class="citation__cell">
+              <p class="citation__text">{TEXT.quote.text}</p>
+              <img src="/icon_qoutes.svg" class="citation__decore" />
+            </div>
+            <div class="citation__cell">
+              <img
+                src="/citation_photo.jpg"
+                alt={TEXT.alts.main}
+                class="citation__photo"
+              />
+            </div>
+          </div>
+          <a href="/services" class="button">{TEXT.serviceLink}</a>
+        </div>
+      </section>
+      <Form client:only="react" />
+    </div>
+    <Footer />
+  </div>
+</Layout>

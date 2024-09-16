@@ -1,0 +1,30 @@
+{
+  "name": "lawyer-web-app",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Sergei Svetashev",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/react": "^3.6.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^4.11.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "@nanostores/react": "^0.7.3",
+    "nanostores": "^0.11.3",
+    "tailwindcss": "^3.4.4"
+  }
+}

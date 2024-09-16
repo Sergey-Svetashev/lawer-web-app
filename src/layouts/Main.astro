@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <script src="http://dadbab.info/content/shared/js/jquery-1.12.4.min.js"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Квалифицированный адвокат в Воронеже предлагает юридическую помощь."
+    />
+    <meta
+      name="keywords"
+      content="Адвокат в Воронеже, юридическая помощь, адвокат, юрист, юрист в воронеже, воронеж, Воронеж, помощь адвоката, помощь юриста, помощь"
+    />
+    <meta http-equiv="content-language" content="ru" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+    <link href="/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

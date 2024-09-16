@@ -1,0 +1,28 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<h2 class="title">{text}</h2>
+
+<style>
+  .title {
+    font-size: 30px;
+    font-weight: 300;
+    padding: 10px 0;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 1024px) {
+    .title {
+      text-align: left;
+      font-size: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+  }
+</style>
